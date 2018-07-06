@@ -1,5 +1,53 @@
-$color: red;
+$sin-color: red;
+$fucked-up-color: #336600;
 
-p {
-    color: $color;
+%sinful-headers {
+  color: $sin-color;
 }
+
+h1 {
+  @extend %sinful-headers;
+}
+
+.fucked-up {
+  color: $fucked-up-color;
+  font-weight: bold;
+}
+
+body {
+  ul {
+    .list-group-item{
+      background-color: #000066;
+      font-size: 1em;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .big-crystal {
+    visibility: hidden;
+  }
+  .small-crystal {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 600px) {
+  .big-crystal {
+    visibility: visible;
+  }
+  .small-crystal {
+    visibility: hidden;
+  }
+}
+
+// %message-shared {
+//   border: 1px solid #ccc;
+//   padding: 10px;
+//   color: #333;
+// }
+
+// .message {
+//   @extend %message-shared;
+// }
